@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: #333;
+}
+
+.app {
+    background-color: #ffffff;
+    color: #333;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    animation: hover 0.5s ease-in-out;
+}
+
+@keyframes hover {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4e54c8;
+}
+
+.quiz {
+    margin-top: 1.5rem;
+}
+
+#question {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #4e54c8;
+    text-align: center;
+}
+
+
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.btn {
+    padding: 1rem;
+    background: #8f94fb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.21);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #4e54c8;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+
+.btn.correct {
+    background: #4caf50; 
+    color: white;
+}
+
+.btn.wrong {
+    background: #f44336; 
+    color: white;
+}
+
+.btn.disabled{
+    cursor: no;
+}
+
+#next-btn {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: #4e54c8;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+#next-btn:hover {
+    background: #2b2d99;
+}
+
+#next-btn:active {
+    transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    #next-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
